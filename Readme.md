@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Виталик Дервановский](https://up.htmlacademy.ru/htmlcss/13/user/203026).
-* Наставник: [Вадим Новаш](https://htmlacademy.ru/profile/id8589)].
+* Наставник: [Вадим Новаш](https://htmlacademy.ru/profile/id8589).
 
 ---
 
