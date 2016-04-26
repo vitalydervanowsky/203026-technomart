@@ -385,7 +385,9 @@ h1 {
   background: #ffffff;
 }
 
-.item:hover {
+.item:hover,
+.manufacturer:hover {
+  border-color: #ffffff; 
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
 
@@ -426,10 +428,9 @@ h1 {
   border: 3px solid #32425c;
 }
 
-.item .actions .btn.bookmark:active {
+.item .actions .btn.bookmark:active,
+.manufacturer:active {
   opacity: 0.3;
-  /*
-  border: 3px solid rgba(50, 66, 92, 0.5);*/
 }
 
 .item .image {
@@ -467,8 +468,9 @@ h1 {
 
 /*main: popular-manufacturer*/
 .manufacturer {
+  box-sizing: border-box;
   float: left;
-  width: 218px;
+  width: 220px;
   height: 145px;
   margin-right: 20px;
   margin-bottom: 20px;
@@ -480,6 +482,10 @@ h1 {
 
 .manufacturer:nth-child(4n) {
   margin-right: 0;
+}
+
+.manufacturer:active {
+  border-color: #ffffff;
 }
 
 .manufacturer .helper {
