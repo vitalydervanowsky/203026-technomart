@@ -278,12 +278,12 @@ h1 {
 
 .flag-new {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: -1px;
+  top: -1px;
   width: 60px;
   height: 59px;
   background: url("../img/new-flag.png") no-repeat;
-  /*overflow: hidden;*/
+  overflow: hidden;
   z-index: 20;
 }
 
@@ -304,9 +304,9 @@ h1 {
 
 .btn {
   display: inline-block;
-  padding: 12px;
   font-weight: 400;
   font-size: 14px;
+  line-height: 38px;
   text-align: center;
   vertical-align: middle;
   text-decoration: none;
@@ -350,6 +350,7 @@ h1 {
 
 .item {
   position: relative;
+  z-index: 1;
   float: left;
   width: 218px;
   height: 320px;
@@ -370,6 +371,42 @@ h1 {
 
 .main-catalog .item:nth-child(3n) {
   margin-right: 0;
+}
+
+.item .actions {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  box-sizing: border-box;
+  width: 218px;
+  height: 170px;
+  padding: 46px 42px;
+  font-size: 0px;
+  background: #ffffff;
+}
+
+.item:hover .actions {
+  display: block;
+}
+
+.item .actions .btn {
+  display: block;
+  font-family: "Cuprum", Arial, sans-serif;
+}
+
+.item .actions .btn.buy {
+  margin-bottom: 7px;
+  color: #ffffff;
+  background: #63a63e;
+  box-shadow: inset 0 -3px #367315;
+}
+
+.item .actions .btn.bookmark {
+  height: 32px;
+  line-height: 32px;
+  color: #32425c;
+  background: #ffffff;
+  border: 3px solid #63a63e;
 }
 
 .item .image {
@@ -627,10 +664,6 @@ h1 {
   margin: 0;
   padding: 0;
   padding-bottom: 35px;
-}
-
-.catalog-items .item .actions {
-  display: none;
 }
 
 .page-selector {
