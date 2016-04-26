@@ -385,6 +385,10 @@ h1 {
   background: #ffffff;
 }
 
+.item:hover {
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+
 .item:hover .actions {
   display: block;
 }
@@ -401,12 +405,31 @@ h1 {
   box-shadow: inset 0 -3px #367315;
 }
 
+.item .actions .btn.buy:hover{
+  background: #5fbb2d;
+}
+
+.item .actions .btn.buy:active{
+  background: #518534;
+  box-shadow: 0 0;
+}
+
 .item .actions .btn.bookmark {
   height: 32px;
   line-height: 32px;
   color: #32425c;
   background: #ffffff;
   border: 3px solid #63a63e;
+}
+
+.item .actions .btn.bookmark:hover {
+  border: 3px solid #32425c;
+}
+
+.item .actions .btn.bookmark:active {
+  opacity: 0.3;
+  /*
+  border: 3px solid rgba(50, 66, 92, 0.5);*/
 }
 
 .item .image {
