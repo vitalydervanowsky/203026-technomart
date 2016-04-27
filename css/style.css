@@ -418,13 +418,6 @@ h1 {
   background: #cc79d1 url("../img/mototech.png") no-repeat 191px 50%;
 }
 
-.slider {
-  float: left;
-  width: 620px;
-  height: 270px;
-  background: #ccc;
-}
-
 .btn {
   display: inline-block;
   font-weight: 400;
@@ -437,6 +430,21 @@ h1 {
   color: #ffffff;
   background: #ee3643;
   border-radius: 3px;
+}
+
+.slider {
+  position: relative;
+  float: left;
+  width: 620px;
+  height: 270px;
+  background: #ccc;
+}
+
+.slider-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 195px;
 }
 
 .btn:hover {
@@ -487,10 +495,7 @@ h1 {
   height: 320px;
   margin-right: 20px;
   margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 18px;
-  font-family: "PT Sans", Arial, sans-serif;
+  font: 700 17px/18px "PT Sans", Arial, sans-serif;
   text-align: center;
   list-style-type: none;
   border: 1px solid #e7e7e7;
@@ -576,23 +581,46 @@ h1 {
 }
 
 .item .title {
-  font-size: 18px;
-  line-height: 20px;
+  margin-top: 15px;
   padding-right: 10px;
   padding-left: 10px;
+  font-size: 18px;
+  line-height: 20px;
 }
 
 .item .oldprice {
-  height: 17px;
-  margin: 10px;
-  line-height: 17px;
+  height: 38px;
+  font-size: 17px;
+  line-height: 38px;
+  vertical-align: middle;
   text-decoration: line-through;
-  text-transform:uppercase;
+  text-transform: uppercase;
   color: #999999;
 }
 
 .item .btn-price {
+  position: relative;
+  width: 140px;
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 38px;
+}
 
+.item .btn-price:hover,
+.item .btn-price:active {
+  background-color: #ee3643;
+}
+
+.item .btn-price:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -19px;
+  width: 0;
+  height: 0;
+  border: 19px solid white;
+  border-left-color: #ee3643;
 }
 
 /*main: popular-manufacturer*/
@@ -634,8 +662,100 @@ h1 {
 /*main: services*/
 .services {
   padding-top: 60px;
-  padding-bottom: 100px;
   background: #f2f6f8;
+}
+
+.services-header h2 {
+  margin-bottom: 30px;
+  font: 400 30px/24px "Cuprum", Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.services-header p {
+  width: 400px;
+  font: 400 13px/24px "PT Sans", Arial, sans-serif;
+}
+
+.services-menu {
+  float: left;
+  margin: 0;
+  margin-top: 70px;
+  padding: 0;
+}
+
+.services-menu li {
+  box-sizing: border-box;
+  width: 240px;
+  height: 60px;
+  padding: 20px;
+  font-weight: 700;
+  font-size: 21px;
+  color: #ffffff;
+  background: #32425c;
+  list-style-type: none;
+  box-shadow: 
+    inset 0 -1px #293449,
+    inset 0 1px #405069;
+}
+
+.services-menu li.active {
+  color: #32425c;
+  background: #ffffff;
+  box-shadow: 0 0 #ffffff;
+}
+
+.services-menu-option {
+  box-sizing: border-box;
+  float: right;
+  width: 700px;
+  min-height: 355px;
+  padding: 70px 340px 0 80px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  box-shadow: -55px -15px 30px -60px rgba(0, 0, 0, 0.5);
+}
+
+.services-menu-option h2 {
+  margin-bottom: 35px;
+  font: 400 36px/24px "Cuprum", Arial, sans-serif;
+  text-transform: uppercase;
+  color: #32425c;
+}
+
+.services-menu-option p {
+  font: 400 13px/24px "PT Sans", Arial, sans-serif;
+}
+
+.services-menu-delivery {
+  background-image: url("../img/services-delivery.png");
+}
+
+.services-menu-delivery p {
+  width: 270px;
+}
+
+.services-menu-guarantee {
+  background-image: url("../img/services-guarantee.png");
+}
+
+.services-menu-guarantee p {
+  width: 380px;
+}
+
+.services-menu-credit {
+  background-image: url("../img/services-credit.png");
+}
+
+.services-menu-credit p {
+  width: 280px;
+}
+
+.services-menu-guarantee {
+  display: none;
+}
+
+.services-menu-credit {
+  display: none;
 }
 
 /*main: about*/
