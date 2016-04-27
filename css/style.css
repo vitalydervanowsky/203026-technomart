@@ -95,8 +95,7 @@ h1 {
   border: 0;
 }
 
-.search-form input:hover,
-.order-block a:hover {
+.search-form input:hover {
   background: #212a3a;
 }
 
@@ -123,6 +122,10 @@ h1 {
   color: #ffffff;
 }
 
+.order-block a:hover {
+  background: #212a3a;
+}
+
 .order-block a:active {
   color: rgba(255, 255, 255, 0.6);
   background: #161d29;
@@ -139,6 +142,12 @@ h1 {
 .order-block .order:active{
   color: rgba(255, 255, 255, 0.51);
   background: #518534;
+}
+
+.order-block .busy,
+.order-block .busy:hover,
+.order-block .busy:active {
+  background: #ee3643;
 }
 
 .bottom-header {
@@ -171,7 +180,7 @@ h1 {
 .tel {
   font-weight: 700;
   font-size: 21px;
-  line-height: 45px;
+  line-height: 39px;
   vertical-align: middle;
   color: #e9292a;
   border: 3px solid #ffffff;
@@ -185,17 +194,17 @@ h1 {
   color: #32425c;
 }
 
+/*user-block*/
 .user-block {
   float: right;
+  box-sizing: border-box;
   width: 300px;
   font-size: 0px;
   text-align: right;
-  outline: 2px solid rgba(200,0,0,0.5);
 }
 
 .user-block-btn {
   display: inline-block;
-  height: 45px;
   font-size: 17px;
   line-height: 45px;
   text-align: center;
@@ -205,21 +214,96 @@ h1 {
   background: #ffffff;
 }
 
+.user-block-btn:hover {
+  color: #ee3643;
+}
+
+.user-block-btn:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .user-block .log-in {
   width: 120px;
   margin-right: 10px;
-  background: #ffffff;
 }
 
 .user-block .register {
   width: 150px;
 }
 
-.user-block .user-name {
-  float: left;
-  font-size: 21px;
+.user-block-main {
+  box-sizing: border-box;
+  width: 300px;
+  margin-bottom: 10px;
+  vertical-align: middle;
 }
 
+.user-block-main a {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 45px;
+  font-size: 17px;
+  line-height: 45px;
+  text-decoration: none;
+  color: #000000;
+  background: #ffffff;
+}
+
+.user-block-main a:hover {
+}
+
+.user-block-main a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.user-profile-name {
+  width: 255px;
+  padding-left: 15px;
+  text-align: left;
+}
+
+.user-log-out {
+  width: 45px;
+  text-align: center;
+}
+
+.user-block-actions {
+  padding-left: 18px;
+  text-align: left;
+}
+
+.user-block-actions a {
+  font-size: 16px;
+  text-decoration: underline;
+  color: #32425c;
+}
+
+.user-block-actions a:hover {
+  color: #ee4d59;
+}
+
+.user-block-actions a:active {
+  color: rgba(50, 66, 92, 0.3);
+}
+
+.devider {
+  display: inline-block;
+  position: relative;
+  width: 32px;
+  height: 9px;
+}
+
+.dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: 2px;
+  left: 14px;
+  background: #32425c;
+  border-radius: 50%;
+}
+
+/*header-nav*/
 .header-nav {
   min-height: 60px;
   background: #32425c;
@@ -229,6 +313,7 @@ h1 {
   margin: 0;
   padding: 0;
   font-size: 0px;
+  text-align: center;
   box-shadow: inset 0 -5px #293449; 
 }
 
@@ -247,12 +332,13 @@ h1 {
   color: #ffffff;
 }
 
-.header-nav li:first-child a {
-  padding-left: 50px;
+.header-nav a:hover {
+  background: #293449;
 }
 
-.header-nav li:last-child a {
-  padding-right: 50px;
+.header-nav a:active {
+  color: rgba(255, 255, 255, 0.5);
+  background: #1d2739;
 }
 
 /*main: products*/
@@ -301,6 +387,14 @@ h1 {
   border-radius: 5px;
 }
 
+.promo a:hover {
+  background-color: rgba(0,0,0,0.2);  
+}
+
+.promo a:active {
+  background-color: rgba(0,0,0,0.3);
+}
+
 .promo.materials {
   background: #f6b22d url("../img/materials.png") no-repeat 212px 50%;
 }
@@ -343,6 +437,14 @@ h1 {
   color: #ffffff;
   background: #ee3643;
   border-radius: 3px;
+}
+
+.btn:hover {
+  background: #ca2c37;
+}
+
+.btn:active {
+  background: #ba2732;
 }
 
 .promo.sales {
@@ -402,6 +504,11 @@ h1 {
   margin-right: 0;
 }
 
+.item:hover {
+  border-color: #ffffff; 
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+
 .item .actions {
   display: none;
   position: absolute;
@@ -412,12 +519,6 @@ h1 {
   padding: 46px 42px;
   font-size: 0px;
   background: #ffffff;
-}
-
-.item:hover,
-.manufacturer:hover {
-  border-color: #ffffff; 
-  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
 
 .item:hover .actions {
@@ -457,8 +558,7 @@ h1 {
   border: 3px solid #32425c;
 }
 
-.item .actions .btn.bookmark:active,
-.manufacturer:active {
+.item .actions .btn.bookmark:active {
   opacity: 0.3;
 }
 
@@ -513,8 +613,14 @@ h1 {
   margin-right: 0;
 }
 
+.manufacturer:hover {
+  border-color: #ffffff; 
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+
 .manufacturer:active {
   border-color: #ffffff;
+  opacity: 0.3;
 }
 
 .manufacturer .helper {
@@ -532,6 +638,7 @@ h1 {
   background: #f2f6f8;
 }
 
+/*main: about*/
 .about {
   padding-top: 70px;
   padding-bottom: 85px;
@@ -566,12 +673,12 @@ h1 {
 }
 
 .btn-more-about {
-  width: 196px;
+  width: 220px;
 }
 
 .btn-get-lost {
   margin-top: 40px;
-  width: 276px;
+  width: 300px;
 }
 
 /*main-catalog*/
@@ -754,9 +861,18 @@ h1 {
   border-radius: 3px;
 }
 
+.page-selector a:hover {
+  border-color: #bdc6ca;
+}
+
+.page-selector a:active {
+  border-color: #ee3643;
+}
+
 .page-selector a.current-page {
   color: #ffffff;
   background: #ee3643;
+  border: 0;
 }
 
 .page-selector a.next-page {
@@ -798,21 +914,19 @@ h1 {
   background: #32425c;
 }
 
-.main-footer-nav .footer-logo-link {
-  float: left;
-  width: 220px;
-  height: 60px;
+.footer-nav li a:hover {
+  text-decoration: underline;
+}
 
-  font-weight: 400;
+.footer-nav li a:active {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.main-footer .logo-link {
+  height: 60px;
   font-size: 30px;
   line-height: 60px;
-  text-align: center;
-  vertical-align: middle;
-  color: #ffffff;
-  background: #ee3643;
-  text-decoration: none;
-  text-transform: uppercase;
-  box-shadow: 0 5px #b52933;
 }
 
 .main-footer-nav ul {
@@ -874,6 +988,15 @@ h1 {
   color: #d4b275;
 }
 
+.bottom-footer a:hover {
+  text-decoration: underline;
+}
+
+.bottom-footer a:active {
+  text-decoration: none;
+  color: #ee3643;
+}
+
 .copyright {
   float: left;
   width: 240px;
@@ -894,6 +1017,11 @@ h1 {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   border-radius: 50%;
+}
+
+.social .button:hover,
+.social .button:active {
+  background: #ee3643;
 }
 
 .social .button.vk{
