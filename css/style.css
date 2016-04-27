@@ -942,9 +942,39 @@ h1 {
 }
 
 .sorting b {
+  margin-right: 140px;
   font-weight: 400;
 }
 
+.sorting-btn {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  border-bottom: 1px dotted #ee3643;
+}
+
+.sorting-btn.active {
+  color: #ee3643;
+  border: 0;
+}
+
+.sorting-btn:hover {
+  color: #000000;
+  border-bottom-style: solid;
+}
+
+.sorting-btn.by-price {
+  margin-right: 70px;
+}
+
+.sorting-btn.by-type {
+  margin-right: 60px;
+}
+
+.sorting-btn.by-functionality {
+  margin-right: 45px;
+}
+
+/* catalog-items*/
 .catalog-items {
   margin: 0;
   padding: 0;
