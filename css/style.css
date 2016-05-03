@@ -1749,6 +1749,11 @@ input[type="radio"]:checked + label::before {
   background: #ee3643;
 }
 
+.button span:hover::before,
+.button span:active::before {
+  color: #ffffff;
+}
+
 .feedback {
   float: left;
   width: 160px;
