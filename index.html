@@ -13,7 +13,8 @@
     		<div class="container clearfix">
     			<a href="#" class="logo-link">Техномарт</a>
   				<form class="search-form" method="get" action="https://echo.htmlacademy.ru/">
-  					<label><input class="search-line" type="search" placeholder="Поиск:"></label>
+  					<input class="header-search" type="search" name="search" placeholder="Поиск:">
+            <button class="btn-search icon-search" type="submit"></button>
   				</form>
     			<div class="order-block">
     				<a class="favorites" href="#"><span class="icon-bookmark"></span>Закладки: 0</a>
@@ -26,7 +27,7 @@
     		<div class="container">
           <div class="info-section clearfix">
       			<h1 class="header-title">Интернет магазин
-              строительных материалов<br>
+              строительных материалов
               и инструментов для ремонта</h1>
 
       			<div class="header-contacts">
@@ -76,22 +77,30 @@
 	    			</div>
 
 	    			<div class="slider">
-              <div class="slider__first-page">
-                <h2 class="slider__header">Перфораторы<br>
-                <span class="slider__header-small">Настроящие мужские игрушки</span></h2>
-                <a class="slider__slider-scroll slider__slider-scroll-left" href="#"><span class="icon-left"></span></a>
-                <a class="slider__slider-scroll slider__slider-scroll-right" href="#"><span class="icon-right"></span></a>
-                <a class="btn slider__more-btn" href="#">Открыть каталог</a>
+              <input type="radio" id="btn-1" name="toggle" checked>
+              <input type="radio" id="btn-2" name="toggle">
+              <div class="slider-controls">
+                <label for="btn-1"></label>
+                <label for="btn-2"></label>
               </div>
+              <div class="slides">
+                <div class="slide">
+                  <h2 class="slider__header">Перфораторы<br>
+                  <span class="slider__header-small">Настроящие мужские игрушки</span></h2>
+                  <a class="slider__slider-scroll slider__slider-scroll-left" href="#"><span class="icon-left"></span></a>
+                  <a class="slider__slider-scroll slider__slider-scroll-right" href="#"><span class="icon-right"></span></a>
+                  <a class="btn slider__more-btn" href="#">Открыть каталог</a>
+                </div>
 
-              <div class="slider__second-page">
-                <h2 class="slider__header">Дрели<br>
-                <span class="slider__header-small">Соседям на радость</span></h2>
-                <a class="slider__slider-scroll slider__slider-scroll-left" href="#"><span class="icon-left"></span></a>
-                <a class="slider__slider-scroll slider__slider-scroll-right" href="#"><span class="icon-right"></span></a>
-                <a class="btn slider__more-btn" href="#">Открыть каталог</a>
+                <div class="slide">
+                  <h2 class="slider__header">Дрели<br>
+                  <span class="slider__header-small">Соседям на радость</span></h2>
+                  <a class="slider__slider-scroll slider__slider-scroll-left" href="#"><span class="icon-left"></span></a>
+                  <a class="slider__slider-scroll slider__slider-scroll-right" href="#"><span class="icon-right"></span></a>
+                  <a class="btn slider__more-btn" href="#">Открыть каталог</a>
+                </div>
               </div>
-	    			</div>
+            </div>
 
 	    			<div class="promo sales">
 	    				<h3>Скидки 50%</h3>
@@ -194,44 +203,54 @@
     		</div>
     	</div>
 
-    	<div class="services">
-    		<div class="container clearfix">
-    			<div class="services-header">
-    				<h2>Сервисы</h2>
-    				<p>Хороший интернет-магазин отличается от плохого не только ценами!
-    				Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-    			</div>
-  				<ul class="services-menu">
-  					<li><a class="active" href="#delivery">Доставка</a></li>
-  					<li><a class="" href="#guarantee">Гарантия</a></li>
-  					<li><a class="" href="#credit">Кредит</a></li>
-  				</ul>
-          <a id="delivery"></a>
-    			<div class="services-menu-option services-menu-delivery">
-            <h2>Доставка</h2>
-            <p>Мы с удовольствием доставим ваш товар прямо
-            к вашему подъезду совершненно бесплатно!
-            Ведь мы неплохо заработаем,<br>
-            поднимая его на ваш этаж!</p>
-          </div>
-          <a id="guarantee"></a>
-          <div class="services-menu-option services-menu-guarantee">
-            <h2>Гарантия</h2>
-            <p>Если купленный у нас товар поломается или заискрит,
-            а также в случае пожара, спровоцированного его возгаранием,
-            вы всегда можете быть уверены в нашей гарантии. Мы обменяем
-            сгоревший товар на новый.<br>
-            Дом уж восстановите как-нибудь сами.</p>
-          </div>
-          <a id="credit"></a>
-          <div class="services-menu-option services-menu-credit">
-            <h2>Кредит</h2>
-            <p>Залезть в долговую яму стало проще!
-            Кредитные консультанты придут вам на помощь.</p>
+      <div class="services">
+        <div class="container clearfix">
+          <div class="services-header">
+            <h2>Сервисы</h2>
+            <p>Хороший интернет-магазин отличается от плохого не только ценами!
+            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           </div>
 
-    		</div>
-    	</div>
+          <div class="services-tabs">
+            <input type="radio" id="services-btn-1" name="toggle2" checked>
+            <input type="radio" id="services-btn-2" name="toggle2">
+            <input type="radio" id="services-btn-3" name="toggle2">
+            <div class="services-controls">
+              <label for="services-btn-1">Доставка</label>
+              <label for="services-btn-2">Гарантия</label>
+              <label for="services-btn-3">Кредит</label>
+            </div>
+
+            <div class="tabs">
+              <div class="tab">
+                <h2>Доставка</h2>
+                <p>Мы с удовольствием доставим ваш товар прямо
+                к вашему подъезду совершненно бесплатно!
+                Ведь мы неплохо заработаем,<br>
+                поднимая его на ваш этаж!</p>
+              </div>
+
+              <div class="tab">
+                <h2>Гарантия</h2>
+                <p>Если купленный у нас товар поломается или заискрит,
+                а также в случае пожара, спровоцированного его возгаранием,
+                вы всегда можете быть уверены в нашей гарантии. Мы обменяем
+                сгоревший товар на новый.<br>
+                Дом уж восстановите как-нибудь сами.</p>
+              </div>
+
+              <div class="tab">
+                <h2>Кредит</h2>
+                <p>Залезть в долговую яму стало проще!
+                Кредитные консультанты придут вам на помощь.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
 
     	<div class="container">
     		<div class="about clearfix">
