@@ -1287,6 +1287,10 @@ input[type="search"]:focus::-moz-input-placeholder {
   top: 9px;
 }
 
+.popup-map iframe {
+  border: none;
+}
+
 /*main-catalog*/
 .breadcrumbs {
   margin: 20px 0;
