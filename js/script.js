@@ -8,6 +8,20 @@ var inCartLink = document.querySelectorAll(".btn-buy");
 var inCartPopup = document.querySelector(".in-cart");
 var inCartClose = document.querySelectorAll(".in-cart-close");
 
+for (var i = 0; i < inCartLink.length; i++) {
+	inCartLink[i].addEventListener("click", function(event) {
+		event.preventDefault();
+		inCartPopup.classList.add("in-cart-show");
+	});
+};
+
+for (var j = 0; j < inCartClose.length; j++) {
+	inCartClose[j].addEventListener("click", function(event) {
+		event.preventDefault();
+		inCartPopup.classList.remove("in-cart-show");
+	});
+}
+
 writeUsLink.addEventListener("click", function(event) {
 	event.preventDefault();
 	writeUsPopup.classList.add("write-us-show");
@@ -27,17 +41,3 @@ popupMapClose.addEventListener("click", function(event) {
 	event.preventDefault();
 	popupMapPopup.classList.remove("popup-map-show");
 });
-
-for (var i = 0; i < inCartLink.length; i++) {
-	inCartLink[i].addEventListener("click", function(event) {
-		event.preventDefault();
-		inCartPopup.classList.add("in-cart-show");
-	});
-};
-
-for (var j = 0; j < inCartClose.length; j++) {
-	inCartClose[j].addEventListener("click", function(event) {
-		event.preventDefault();
-		inCartPopup.classList.remove("in-cart-show");
-	});
-}
