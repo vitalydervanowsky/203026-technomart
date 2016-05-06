@@ -226,6 +226,14 @@ input[type="search"]:focus + .btn-search {
   background-color: #fff;
 }
 
+input[type="search"]:focus::-webkit-input-placeholder {
+  color: #000000;
+}
+
+input[type="search"]:focus::-moz-input-placeholder {
+  color: #000000;
+}
+
 /*order-block*/
 .order-block {
   float: right;
@@ -1843,8 +1851,8 @@ input[type="radio"]:checked + label::before {
   background: #ee3643;
 }
 
-.button span:hover::before,
-.button span:active::before {
+.button:hover span::before,
+.button:active span::before {
   color: #ffffff;
 }
 
