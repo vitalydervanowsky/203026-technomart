@@ -122,7 +122,7 @@
 	    			<ul class="popular-content clearfix">
 	    				<li class="item">
                 <div class="actions">
-                  <a href="#" class="btn btn-buy">Купить</a>
+                  <a href="#" class="btn btn-buy"><span class="icon-basket"></span>Купить</a>
                   <a href="#" class="btn btn-bookmark">В закладки</a>
                 </div>
 	    					<div class="image"><span class="helper"></span><img src="img/bosch-bfg-9000.png" width="184" height="164" alt="Перфоратор BOSCH BFG 9000"></div>
@@ -133,7 +133,7 @@
 
 	    				<li class="item">
                 <div class="actions">
-                  <a href="#" class="btn btn-buy">Купить</a>
+                  <a href="#" class="btn btn-buy"><span class="icon-basket"></span>Купить</a>
                   <a href="#" class="btn btn-bookmark">В закладки</a>
                 </div>
 	    					<div class="image"><span class="helper"></span><img src="img/bosch-bfg-3000.png" width="127" height="112" alt="Перфоратор BOSCH BFG 3000"></div>
@@ -144,7 +144,7 @@
 
 	    				<li class="item">
                 <div class="actions">
-                  <a href="#" class="btn btn-buy">Купить</a>
+                  <a href="#" class="btn btn-buy"><span class="icon-basket"></span>Купить</a>
                   <a href="#" class="btn btn-bookmark">В закладки</a>
                 </div>
 	    					<div class="image"><span class="helper"></span><img src="img/bosch-bfg-6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG 6000"></div>
@@ -156,7 +156,7 @@
 	    				<li class="item">
 	    					<div class="flag-new"></div>
                 <div class="actions">
-                  <a href="#" class="btn btn-buy">Купить</a>
+                  <a href="#" class="btn btn-buy"><span class="icon-basket"></span>Купить</a>
                   <a href="#" class="btn btn-bookmark">В закладки</a>
                 </div>
                 <div class="image"><span class="helper"></span><img src="img/bosch-bfg-2000.png" width="127" height="112" alt="Перфоратор BOSCH BFG 2000"></div>
@@ -272,8 +272,8 @@
     				<h2>Контакты</h2>
     				<p>Вы можете забрать товар сами,
     				заехав в наш офис:</p>
-    				<a href="https://goo.gl/maps/K5mpVtu5jX12" target="_blank"><img src="img/map-small.png" width="300" height="158" alt="Как к нам добраться"></a>
-    				<a class="btn btn-get-lost" href="#">Заблудились? Напишите нам!</a>
+    				<a class="popup-map-link" href="#"><img src="img/map-small.png" width="300" height="158" alt="Как к нам добраться"></a>
+    				<a class="btn write-us-btn" href="#">Заблудились? Напишите нам!</a>
     			</div>
 
         </div>
@@ -336,8 +336,20 @@
       </div>
     </footer>
 
+    <div class="in-cart">
+      <div class="in-cart__content">
+        <a class="popup-window__cross in-cart-close" href="#"></a>
+        <span class="in-cart__content__round"></span>
+        <span class="in-cart__content__text">Товар добавлен в корзину!</span>
+      </div>
+      <div class="in-cart__buttons">
+        <a class="btn in-cart__button__order" href="#">Оформить заказ</a>
+        <a class="btn in-cart__button__to-catalog in-cart-close" href="#">Продолжить покупки</a>
+      </div>
+    </div>
+
     <form class="write-us">
-      <a class="popup-window__cross" href="#"></a>
+      <a class="popup-window__cross write-us-close" href="#"></a>
       <fieldset class="write-us__name">
         <legend>Ваше имя:</legend>
         <input type="text" name="write-us__name" placeholder="Представьтесь, пожалуйста">
@@ -359,6 +371,13 @@
         <button class="btn write-us__submit-btn" type="submit">Отправить</button>
       </div>
     </form>
+
+    <div class="popup-map">
+      <a class="popup-window__cross popup-map-close" href="#"></a>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.3573662122512!2d30.318165619792225!3d59.9392148071728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+191186!5e0!3m2!1sen!2sru!4v1462512178123" width="940" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
+    <script type="text/javascript" src="js/script.js"></script>
 
   </body>
 </html>
