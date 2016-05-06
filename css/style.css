@@ -1704,6 +1704,11 @@ input[type="radio"]:checked + label::before {
   background: #ffffff;
 }
 
+.in-cart__button__to-catalog:hover {
+  background: #ffffff;
+  outline: 2px solid #ee3643;
+}
+
 /*footer*/
 .footer-nav {
   color: #f1f5f7;
