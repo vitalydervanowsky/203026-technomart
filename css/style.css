@@ -1195,10 +1195,13 @@ input[type="search"]:focus::-moz-input-placeholder {
   position: absolute;
   top: 16px;
   right: 9px;
-  float: right;
   width: 21px;
   height: 21px;
+  font-size: 0px;
   background: url("../img/cross.png") no-repeat;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .write-us fieldset {
@@ -1710,6 +1713,9 @@ input[type="radio"]:checked + label::before {
   width: 220px;
   color: #000000;
   background: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .in-cart__button__to-catalog:hover {
