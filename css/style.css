@@ -175,6 +175,7 @@ ul {
   display: block;
   float: left;
   width: 270px;
+  max-height: 42px;
 }
 
 .icon-search::before {
@@ -1464,9 +1465,12 @@ input[type="radio"]:checked + label::before {
   font-weight: 400;
 }
 
+.sorting a {
+  text-decoration: none;
+}
+
 .sorting-btn {
   color: rgba(0, 0, 0, 0.3);
-  text-decoration: none;
   border-bottom: 1px dotted #ee3643;
 }
 
@@ -1710,6 +1714,7 @@ input[type="radio"]:checked + label::before {
 .social .button:hover,
 .social .button:active {
   background: #ee3643;
+  text-decoration: none;
 }
 
 .button:hover span::before,
