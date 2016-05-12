@@ -30,6 +30,14 @@ for (var j = 0; j < inCartClose.length; j++) {
 	});
 }
 
+overlay.addEventListener("click", function(event) {
+	event.preventDefault();
+	overlay.classList.remove("overlay-show");
+	inCartPopup.classList.remove("in-cart-show");
+	writeUsPopup.classList.remove("write-us-show");
+	popupMapPopup.classList.remove("popup-map-show");
+});
+
 window.addEventListener("keydown", function(event) {
 	if (event.keyCode === 27) {
 		if (writeUsPopup.classList.contains("write-us-show")) {
