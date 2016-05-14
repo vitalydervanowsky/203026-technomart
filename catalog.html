@@ -70,7 +70,7 @@
             <li><a href="index.html"><span class="icon-home"></span></a></li>
             <li><a href="#"><span class="icon-right"></span>Каталог</a></li>
             <li><a href="#"><span class="icon-right"></span>Инструмент</a></li>
-            <li><a><span class="icon-right"></span>Перфораторы</a></li>
+            <li class="breadcrumbs__current"><a><span class="icon-right"></span>Перфораторы</a></li>
           </ul>
           
           <h2 class="catalog-title">Перфораторы</h2>
@@ -141,7 +141,7 @@
 
           <div class="filtered-content">
             <div class="sorting">
-              <b>Сортировка:</b>
+              Сортировка:
               <a class="sorting-btn active by-price" href="#">По цене</a>
               <a class="sorting-btn by-type" href="#">По типу</a>
               <a class="sorting-btn by-functionality" href="#">По функционалу</a>
@@ -342,22 +342,22 @@
 
     <form class="write-us" method="post" action="https://echo.htmlacademy.ru/">
       <button class="popup-window__cross write-us-close" type="button" title="Закрыть">Закрыть</button>
-      <fieldset class="write-us__name">
-        <legend>Ваше имя:</legend>
-        <input type="text" name="write-us__name" placeholder="Представьтесь, пожалуйста">
-      </fieldset>
+      <div class="write-us__name">
+        <label for="write-us__name">Ваше имя:</label>
+        <input type="text" name="write-us__name" id="write-us__name" placeholder="Представьтесь, пожалуйста">
+      </div>
 
-      <fieldset class="write-us__email">
-        <legend>Ваш e-mail:</legend>
-        <input type="email" name="write-us__email" placeholder="Для отправки ответа">
-      </fieldset>
+      <div class="write-us__email">
+        <label for="write-us__email">Ваш e-mail:</label>
+        <input type="email" name="write-us__email" id="write-us__email" placeholder="Для отправки ответа">
+      </div>
       
       <div class="write-us__devider"></div>
 
-      <fieldset class="write-us__text">
-        <legend>Текст письма:</legend>
-        <textarea name="write-us__text" placeholder="В свободной форме"></textarea>
-      </fieldset>
+      <div class="write-us__text">
+        <label for="write-us__text">Текст письма:</label>
+        <textarea name="write-us__text" id="write-us__text" placeholder="В свободной форме"></textarea>
+      </div>
 
       <div class="write-us__submit">
         <button class="btn write-us__submit-btn" type="submit">Отправить</button>

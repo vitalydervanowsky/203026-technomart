@@ -1,9 +1,11 @@
 var writeUsLink = document.querySelector(".write-us-btn");
 var writeUsPopup = document.querySelector(".write-us");
 var writeUsClose = document.querySelector(".write-us-close");
-var writeUsName = writeUsPopup.querySelector('[name="write-us__name"]');
-var writeUsEmail = writeUsPopup.querySelector('[name="write-us__email"]');
-var writeUsText = writeUsPopup.querySelector('[name="write-us__text"]');
+var writeUsName = writeUsPopup.querySelector("[name='write-us__name']");
+var writeUsEmail = writeUsPopup.querySelector("[name='write-us__email']");
+var writeUsText = writeUsPopup.querySelector("[name='write-us__text']");
+// двойные кавычки нельзя вставлять в двойные - будет ошибка,
+// без одинарных кавычек не обойтись
 var storageName = localStorage.getItem("name");
 var storageEmail = localStorage.getItem("email");
 var popupMapLink = document.querySelector(".popup-map-link");

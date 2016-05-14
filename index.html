@@ -77,8 +77,8 @@
 	    			</div>
 
 	    			<div class="slider">
-              <input type="radio" id="btn-1" name="toggle" checked>
-              <input type="radio" id="btn-2" name="toggle">
+              <input type="radio" class="slider__btn-1" id="btn-1" name="toggle" checked>
+              <input type="radio" class="slider__btn-2" id="btn-2" name="toggle">
               <div class="slider-controls">
                 <label for="btn-1"></label>
                 <label for="btn-2"></label>
@@ -209,17 +209,17 @@
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           </div>
 
-          <div class="services-tabs">
-            <input type="radio" id="services-btn-1" name="toggle2" checked>
-            <input type="radio" id="services-btn-2" name="toggle2">
-            <input type="radio" id="services-btn-3" name="toggle2">
+          <div class="services-tabs clearfix">
+            <input type="radio" class="services-btn-1" id="services-btn-1" name="toggle2" checked>
+            <input type="radio" class="services-btn-2" id="services-btn-2" name="toggle2">
+            <input type="radio" class="services-btn-3" id="services-btn-3" name="toggle2">
             <div class="services-controls">
               <label for="services-btn-1">Доставка</label>
               <label for="services-btn-2">Гарантия</label>
               <label for="services-btn-3">Кредит</label>
             </div>
 
-            <div class="tabs clearfix">
+            <div class="tabs">
               <div class="tab">
                 <h2>Доставка</h2>
                 <p>Мы с удовольствием доставим ваш товар прямо
@@ -241,6 +241,7 @@
                 <h2>Кредит</h2>
                 <p>Залезть в долговую яму стало проще!
                 Кредитные консультанты придут вам на помощь.</p>
+                <a class="btn credit-request" href="#">Отправить заявку</a>
               </div>
             </div>
           </div>
@@ -348,22 +349,22 @@
 
     <form class="write-us" method="post" action="https://echo.htmlacademy.ru/">
       <button class="popup-window__cross write-us-close" type="button" title="Закрыть">Закрыть</button>
-      <fieldset class="write-us__name">
-        <legend>Ваше имя:</legend>
-        <input type="text" name="write-us__name" placeholder="Представьтесь, пожалуйста">
-      </fieldset>
+      <div class="write-us__name">
+        <label for="write-us__name">Ваше имя:</label>
+        <input type="text" name="write-us__name" id="write-us__name" placeholder="Представьтесь, пожалуйста">
+      </div>
 
-      <fieldset class="write-us__email">
-        <legend>Ваш e-mail:</legend>
-        <input type="email" name="write-us__email" placeholder="Для отправки ответа">
-      </fieldset>
+      <div class="write-us__email">
+        <label for="write-us__email">Ваш e-mail:</label>
+        <input type="email" name="write-us__email" id="write-us__email" placeholder="Для отправки ответа">
+      </div>
       
       <div class="write-us__devider"></div>
 
-      <fieldset class="write-us__text">
-        <legend>Текст письма:</legend>
-        <textarea name="write-us__text" placeholder="В свободной форме"></textarea>
-      </fieldset>
+      <div class="write-us__text">
+        <label for="write-us__text">Текст письма:</label>
+        <textarea name="write-us__text" id="write-us__text" placeholder="В свободной форме"></textarea>
+      </div>
 
       <div class="write-us__submit">
         <button class="btn write-us__submit-btn" type="submit">Отправить</button>

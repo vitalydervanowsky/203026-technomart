@@ -441,9 +441,6 @@ input[type="search"]:focus::-ms-input-placeholder {
   background: #ffffff;
 }
 
-.user-block-main a:hover {
-}
-
 .user-block-main a:active {
   color: rgba(0, 0, 0, 0.3);
 }
@@ -467,7 +464,7 @@ input[type="search"]:focus::-ms-input-placeholder {
   font-size: 18px;
   font-family: "symbols-technomart";
   color: #c5c5c5;
-}
+}/*
 
 .user-profile-name:hover::before {
   color: #32425c;
@@ -475,7 +472,7 @@ input[type="search"]:focus::-ms-input-placeholder {
 
 .user-profile-name:active::before {
   color: #c5c5c5;
-}
+}*/
 
 .user-log-out {
   width: 42px;
@@ -484,12 +481,24 @@ input[type="search"]:focus::-ms-input-placeholder {
 
 .user-log-out .icon-logout {
   color: #c5c5c5;
-}
+}/*
 
 .user-log-out:hover .icon-logout {
   color: #32425c;
 }
 
+.user-log-out:active .icon-logout {
+  color: #c5c5c5;
+}*/
+/*> 2. Наведение на поле http://take.ms/uxiZb не по стайлгайду 
+  > (вторая иконка не выделяется, хотя должна);
+утверждение спорное, но я реализую, как видите Вы (я видел 
+поведение этого блока иначе)*/
+.user-block-main:hover .user-profile-name::before,
+.user-block-main:hover .icon-logout {
+  color: #32425c;
+}
+.user-block-main .user-profile-name:active::before,
 .user-log-out:active .icon-logout {
   color: #c5c5c5;
 }
@@ -656,7 +665,6 @@ input[type="search"]:focus::-ms-input-placeholder {
   float: left;
   width: 620px;
   height: 266px;
-  background: #acaaa7;
 }
 
 .slider input[type=radio] {
@@ -705,8 +713,8 @@ input[type="search"]:focus::-ms-input-placeholder {
   right: -4px;
 }
 
-#btn-1:checked ~ .slider-controls label[for="btn-1"],
-#btn-2:checked ~ .slider-controls label[for="btn-2"] { 
+.slider__btn-1:checked ~ .slider-controls label[for="btn-1"],
+.slider__btn-2:checked ~ .slider-controls label[for="btn-2"] { 
   background: #ee3643;
 }
 
@@ -765,24 +773,22 @@ input[type="search"]:focus::-ms-input-placeholder {
 }
 
 .slide:nth-child(1){
-  background-image:url("../img/slider1.jpg");
-  background-repeat:no-repeat;
+  background: #acaaa7 url("../img/slider1.jpg") no-repeat;
 }
 
 .slide:nth-child(2){
-  background-image:url("../img/slider2.jpg");
-  background-repeat:no-repeat;
+  background: #acaaa7 url("../img/slider2.jpg") no-repeat;
 }
 
 .slide{
   display:none;
 }
 
-#btn-1:checked ~ .slides .slide:nth-child(1) { 
+.slider__btn-1:checked ~ .slides .slide:nth-child(1) { 
   display: block;
 }
 
-#btn-2:checked ~ .slides .slide:nth-child(2) { 
+.slider__btn-2:checked ~ .slides .slide:nth-child(2) { 
   display: block;
 }
 /*end of slider*/
@@ -1030,20 +1036,22 @@ input[type="search"]:focus::-ms-input-placeholder {
 
 /*services-tabs*/
 .services-tabs{
-  position: relative;
-  height: 350px;
+  /*position: relative;*/
+  /*min-height: 350px;*/
 }
 
 .services-tabs input[type=radio] {
-  position: absolute;
+  position: relative;
   opacity: 0;
 }
 
 .services-controls{
-  position: absolute;
+  /*position: absolute;
   top: 70px;
-  left: 0;
+  left: 0;*/
+  float: left;
   width: 240px;
+  margin-top: 70px;
 }
 
 .services-controls label{
@@ -1051,7 +1059,7 @@ input[type="search"]:focus::-ms-input-placeholder {
   box-sizing: border-box;
   width: 240px;
   height: 60px;
-  padding: 0 30px;
+  padding: 0 23px;
   font-weight: 700;
   font-size: 21px;
   line-height: 55px;
@@ -1068,24 +1076,26 @@ input[type="search"]:focus::-ms-input-placeholder {
   background: #293449;
 }
 
-#services-btn-1:checked ~ .services-controls label[for="services-btn-1"],
-#services-btn-2:checked ~ .services-controls label[for="services-btn-2"],
-#services-btn-3:checked ~ .services-controls label[for="services-btn-3"] { 
+.services-btn-1:checked ~ .services-controls label[for="services-btn-1"],
+.services-btn-2:checked ~ .services-controls label[for="services-btn-2"],
+.services-btn-3:checked ~ .services-controls label[for="services-btn-3"] { 
   color: #32425c;
   background: #ffffff;
   box-shadow: 0 1px #ffffcc;
 }
 
 .tab{
-  position: absolute;
+/*  position: absolute;
   top: 0;
-  left: 240px;
+  left: 240px;*/
   box-sizing: border-box;
+  float: right;
   width: 700px;
   height: 100%;
   padding: 70px 340px 0 80px;
-  overflow: hidden;
+  /*overflow: auto;*/
 
+  font: 13px/24px "PT Sans Regular", Arial, sans-serif;
   background-repeat: no-repeat;
   background-position: 100% 100%;
   box-shadow: -55px -15px 30px -60px rgba(0, 0, 0, 0.5);
@@ -1100,22 +1110,30 @@ input[type="search"]:focus::-ms-input-placeholder {
 
 .tab p {
   width: 280px;
-  font: 13px/24px "PT Sans Regular", Arial, sans-serif;
 }
 
 .tab:nth-child(2) p{
   width: 380px;
 }
 
+.tab a {
+  width: 195px;
+  margin-top: 30px;
+  font-family: "Cuprum Regular", Arial, sans-serif;
+}
+
 .tab:nth-child(1){
+  padding-bottom: 127px;
   background-image: url("../img/services-delivery.png");
 }
 
 .tab:nth-child(2){
+  padding-bottom: 103px;
   background-image: url("../img/services-guarantee.png");
 }
 
 .tab:nth-child(3){
+  padding-bottom: 107px;
   background-image: url("../img/services-credit.png");
 }
 
@@ -1167,7 +1185,7 @@ input[type="search"]:focus::-ms-input-placeholder {
 }
 
 .about ul {
-  margin-top: 10px;
+  margin-top: 8px;
   margin-bottom: 28px;
 }
 
@@ -1188,7 +1206,7 @@ input[type="search"]:focus::-ms-input-placeholder {
 
 .write-us-btn {
   width: 300px;
-  margin-top: 37px;
+  margin-top: 35px;
 }
 
 /*main-catalog*/
@@ -1221,6 +1239,22 @@ input[type="search"]:focus::-ms-input-placeholder {
   padding-right: 8px;
   font-size: 14px;
   color: #c1c6ce;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs a:active {
+  color: #ee3643;
+}
+
+.breadcrumbs__current a:hover {
+  text-decoration: none;
+}
+
+.breadcrumbs__current a:active {
+  color: #000000;
 }
 
 .catalog-title {
@@ -1443,6 +1477,15 @@ input[type="radio"]:checked + label::before {
   background: #ffffff;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
+  outline: none;
+}
+
+.filter-form button:hover {
+  border-color: #bdc6ca;
+}
+
+.filter-form button:active {
+  border-color: #ee3643;
 }
 
 /*---------------------------*/
@@ -1455,14 +1498,9 @@ input[type="radio"]:checked + label::before {
   height: 38px;
   margin-bottom: 20px;
   padding-left: 15px;
-  font: 13px "PT Sans Regular", Arial, sans-serif;
+  font: 400 13px "PT Sans Regular", Arial, sans-serif;
   text-transform: uppercase;
   background: #f7f3ec;
-}
-
-.sorting b {
-  margin-right: 140px;
-  font-weight: 400;
 }
 
 .sorting a {
@@ -1486,6 +1524,7 @@ input[type="radio"]:checked + label::before {
 
 .sorting-btn.by-price {
   margin-right: 70px;
+  margin-left: 140px;
 }
 
 .sorting-btn.by-type {
@@ -1500,6 +1539,16 @@ input[type="radio"]:checked + label::before {
 .sorting .icon-down-dir {
   font-size: 24px;
   color: #c6c2bd;
+}
+
+.by-123:hover .icon-up-dir,
+.by-321:hover .icon-down-dir {
+  color: #000000;
+}
+
+.by-123:active .icon-up-dir,
+.by-321:active .icon-down-dir {
+  color: #ee3643;
 }
 
 .active .icon-up-dir,
@@ -1563,7 +1612,7 @@ input[type="radio"]:checked + label::before {
 
 .page-selector a.next-page {
   width: 140px;
-  }
+}
 
 .main-catalog-about {
   padding-top: 60px;
@@ -1752,17 +1801,41 @@ input[type="radio"]:checked + label::before {
 }
 
 @-webkit-keyframes bounce {
-  0% { -webkit-transform: translateY(-2000px); transform: translateY(-2000px); }
-  70% { -webkit-transform: translateY(30px); transform: translateY(30px); }
-  90% { -webkit-transform: translateY(-10px); transform: translateY(-10px); }
-  100% { -webkit-transform: translateY(0); transform: translateY(0); }
+  0% { 
+    -webkit-transform: translateY(-2000px); 
+    transform: translateY(-2000px); 
+  }
+  70% { 
+    -webkit-transform: translateY(30px); 
+    transform: translateY(30px); 
+  }
+  90% { 
+    -webkit-transform: translateY(-10px); 
+    transform: translateY(-10px); 
+  }
+  100% { 
+    -webkit-transform: translateY(0); 
+    transform: translateY(0); 
+  }
 }
 
 @keyframes bounce {
-  0% { -webkit-transform: translateY(-2000px); transform: translateY(-2000px); }
-  70% { -webkit-transform: translateY(30px); transform: translateY(30px); }
-  90% { -webkit-transform: translateY(-10px); transform: translateY(-10px); }
-  100% { -webkit-transform: translateY(0); transform: translateY(0); }
+  0% { 
+    -webkit-transform: translateY(-2000px); 
+    transform: translateY(-2000px); 
+  }
+  70% { 
+    -webkit-transform: translateY(30px); 
+    transform: translateY(30px); 
+  }
+  90% { 
+    -webkit-transform: translateY(-10px); 
+    transform: translateY(-10px); 
+  }
+  100% { 
+    -webkit-transform: translateY(0); 
+    transform: translateY(0); 
+  }
 }
 
 .write-us-show {
@@ -1772,15 +1845,33 @@ input[type="radio"]:checked + label::before {
 }
 
 @-webkit-keyframes shake {
-  0%, 100% { -webkit-transform: translateX(0); transform: translateX(0); }
-  10%, 30%, 50%, 70%, 90% { -webkit-transform: translateX(-10px); transform: translateX(-10px); }
-  20%, 40%, 60%, 80% { -webkit-transform: translateX(10px); transform: translateX(10px); }
+  0%, 100% { 
+    -webkit-transform: translateX(0); 
+    transform: translateX(0); 
+  }
+  10%, 30%, 50%, 70%, 90% { 
+    -webkit-transform: translateX(-10px); 
+    transform: translateX(-10px); 
+  }
+  20%, 40%, 60%, 80% { 
+    -webkit-transform: translateX(10px); 
+    transform: translateX(10px); 
+  }
 }
 
 @keyframes shake {
-  0%, 100% { -webkit-transform: translateX(0); transform: translateX(0); }
-  10%, 30%, 50%, 70%, 90% { -webkit-transform: translateX(-10px); transform: translateX(-10px); }
-  20%, 40%, 60%, 80% { -webkit-transform: translateX(10px); transform: translateX(10px); }
+  0%, 100% { 
+    -webkit-transform: translateX(0); 
+    transform: translateX(0); 
+  }
+  10%, 30%, 50%, 70%, 90% { 
+    -webkit-transform: translateX(-10px); 
+    transform: translateX(-10px); 
+  }
+  20%, 40%, 60%, 80% { 
+    -webkit-transform: translateX(10px); 
+    transform: translateX(10px); 
+  }
 }
 
 .write-us-error {
@@ -1801,13 +1892,15 @@ input[type="radio"]:checked + label::before {
   cursor: pointer;
 }
 
-.write-us fieldset {
+.write-us__name,
+.write-us__email,
+.write-us__text {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-.write-us legend {
+.write-us label {
   font-size: 18px;
 }
 
@@ -1867,8 +1960,8 @@ input[type="radio"]:checked + label::before {
   z-index: 50;
   display: none;
   box-sizing: border-box;
-  /*width: 940px;*/
-  /*height: 450px;*/
+  width: 940px;
+  height: 450px;
   margin-top: -225px;
   margin-left: -470px;
   padding: 0;
